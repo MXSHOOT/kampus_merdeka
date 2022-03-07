@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>js calculator</title>
+        <script>
+            
+            function calc()
+            {
+                var a1 = parseFloat(document.getElementById('a1').value);
+                var a2 = parseFloat(document.getElementById('a2').value);
+                
+                var oper = document.getElementById('operators').value;
+                if (isNaN(a1) || a1 == '') {
+                    alert("Data Kolom 1 Salah/Kosong, Harap isi data dengan benar");
+                } else if (isNaN(a2) || a2 == '') {
+                    alert("Data Kolom 2 Salah/Kosong, Harap isi data dengan benar");
+                } else {
+                
+                    if(oper === '+')
+                    {
+                        document.getElementById('result').value = a1+a2;
+                    }
+                    
+                    if(oper === '-')
+                    {
+                        document.getElementById('result').value = a1-a2;
+                    }
+                    
+                    if(oper === '/')
+                    {
+                        document.getElementById('result').value = a1/a2;
+                    }
+                    
+                    if(oper === 'X')
+                    {
+                        document.getElementById('result').value = a1*a2;
+                    }
+                    if(oper === '^')
+                    {
+                        document.getElementById('result').value = Math.pow(a1,a2);
+                    }
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        <form>
+        <input type="text" name="a1" id="a1"/><br/><br/>
+        <input type="text" name="a2" id="a2"/><br/><br/>
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="X">X</option>
+            <option value="^">^</option>
+        </select>
+        <input type="button" name="submit" value="=" onclick="calc()" />
+        <input type="text" id="result" value="0" disabled />
+        <input type="reset"value="reset">
+    </form>
+    </body>
+</html>
