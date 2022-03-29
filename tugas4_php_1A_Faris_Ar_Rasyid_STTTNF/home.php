@@ -9,7 +9,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 <html>
     <head>
         <title>Belajar CSS Eksternal</title>
-        <link rel="stylesheet" type="text/css" href="css/style_tugas2.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="icon" href="icon/home.gif" type="image/x-icon">
     </head>    
     <body> 
